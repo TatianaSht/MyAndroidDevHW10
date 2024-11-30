@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubber_nipple_factory_black"
+        android:text="@string/title_timer"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circular_progress"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@id/sliderTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTimer" />
+
+    <TextView
+        android:id="@+id/progressTimer"
+        style="@style/timerTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/progress_timer_text"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/sliderTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTimer" />
+
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderTimer"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/time_selection_slider"
+        app:trackColorInactive="@color/light_violet"
+        app:trackHeight="5dp"
+        android:stepSize="10"
+        android:valueFrom="10"
+        android:valueTo="60"
+        app:layout_constraintBottom_toTopOf="@id/buttonStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        style="@style/buttonStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/start_button"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sliderTimer" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        style="@style/buttonStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_button"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sliderTimer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

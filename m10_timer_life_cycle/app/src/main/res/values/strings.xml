@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My_Android_dev_hw_10</string>
+    <string name="title_timer">Countdown Timer</string>
+    <string name="progress_timer_text">10</string>
+    <string name="time_selection_slider">Slider</string>
+    <string name="start_button">Start</string>
+    <string name="stop_button">Stop</string>
+</resources>
